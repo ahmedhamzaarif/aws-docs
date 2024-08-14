@@ -1,0 +1,53 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TH from '../components/TH.astro'
+import TD from '../components/TD.astro'
+---
+
+<Layout title="Home">
+  <div class="mb-10">
+    <img src="/images/cloud.jpg" class="h-[28rem] w-full object-cover mb-10 rounded-xl" alt="">
+    <h1 class="text-3xl font-semibold mb-5">What is Cloud?</h1>
+    <p>Cloud is a <b>remote server</b> that is <b>accessible 24/7</b> from anywhere. These are <b>available as on-demand resources</b> like data storage & computing power, which removes the hassle of maintaining physical servers for businesses & individuals and <b>pay only for what is beign used</b>.</p>
+  </div>
+  <div>
+    <h1 class="text-3xl font-semibold mb-5">Cloud Providers</h1>
+
+    <div class="max-w-screen overflow-x-auto pb-5">
+      <table class="table-auto w-full border-separate border-spacing-2 border border-slate-300 bg-slate-100">
+        <caption class="caption-bottom text-sm text-light mt-5 text-slate-500">
+          Table: Comparison of Top 3 commmonly used Cloud Proiders.
+        </caption>
+        <thead>
+          <tr>
+            <TH>Provider</TH>
+            <TH>AWS</TH>
+            <TH>Azure</TH>
+            <TH>GCloud</TH>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <TH>Rank By Market Share</TH>
+            <TD>#1 - (32%) </TD>
+            <TD>#2 - (23%) </TD>
+            <TD>#3 - (9%) </TD>
+          </tr>
+          <tr>
+            <TH>Company</TH>
+            <TD>Amazon</TD>
+            <TD>Microsoft</TD>
+            <TD>Google</TD>
+          </tr>
+          <tr>
+            <TH>Notable Users</TH>
+            <TD>Netflix, Canva</TD>
+            <TD>Walmart, FedX, Starbucks</TD>
+            <TD>Spotify, Twitter, Paypal</TD>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</Layout>

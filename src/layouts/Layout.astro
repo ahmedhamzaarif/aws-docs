@@ -1,0 +1,42 @@
+---
+interface Props {
+	title: string;
+}
+const primary = "#333";
+const secondary = "#fff";
+const medium = "#555";
+let {title = "Home"} = Astro.props
+import Footer from '../components/Footer.astro'
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{title}</title>
+	<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
+</head>
+<body class="flex flex-col flex-wrap min-h-screen">
+	<!-- <header>Header</header> -->
+	<main class="w-full max-w-7xl p-5 mx-auto my-10">
+		<slot>
+			<span class="block py-40 text-center">
+				No Content Found
+			</span>
+		</slot>
+	</main>
+	<Footer />
+</body>
+</html>
+
+<style is:global define:vars={{primary, secondary, medium}}>
+	@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Poppins:wght@300;400;500;600&display=swap');
+	body{
+    font-size: 16px;
+		line-height: 2;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+  }
+</style>
